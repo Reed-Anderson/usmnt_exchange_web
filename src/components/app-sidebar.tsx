@@ -1,15 +1,7 @@
 "use client"
 
 import type * as React from "react"
-import {
-    Handshake,
-    Store,
-    Command,
-    Frame,
-    Map as MapIcon,
-    PieChart,
-    ChartCandlestick,
-} from "lucide-react"
+import { Handshake, Store, Command, ChartCandlestick } from "lucide-react"
 import { NavMain } from "./nav-main"
 import { NavUser } from "./nav-user"
 import {
@@ -23,9 +15,9 @@ import {
 
 const data = {
     user: {
-        name: "shadcn",
-        email: "m@example.com",
-        avatar: "/avatars/shadcn.jpg",
+        name: "Reed (Admin)",
+        email: "usmnt-exchange@gmail.com",
+        avatar: "https://cdn.vox-cdn.com/thumbor/an9IbQhxd5nGX5aWSNwIuzNL86c=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/24377853/1458514159.jpg",
     },
     navMain: [
         {
@@ -36,7 +28,7 @@ const data = {
             items: [
                 {
                     title: "Portfolio",
-                    url: "#",
+                    url: "/trading/portfolio",
                 },
                 {
                     title: "Trade History",
@@ -103,23 +95,6 @@ const data = {
                     url: "#",
                 },
             ],
-        },
-    ],
-    projects: [
-        {
-            name: "Design Engineering",
-            url: "#",
-            icon: Frame,
-        },
-        {
-            name: "Sales & Marketing",
-            url: "#",
-            icon: PieChart,
-        },
-        {
-            name: "Travel",
-            url: "#",
-            icon: MapIcon,
         },
     ],
 }

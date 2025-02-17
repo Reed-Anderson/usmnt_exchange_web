@@ -15,6 +15,7 @@ import {
     SidebarTrigger,
 } from "@/components/shadcn/sidebar"
 import { Bell, Search } from "lucide-react"
+import { Card } from "@/components/shadcn/card"
 
 export default function Page() {
     return (
@@ -50,13 +51,23 @@ export default function Page() {
                         </Button>
                     </div>
                 </header>
-                <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-                    <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-                        <div className="aspect-video rounded-xl bg-muted/50" />
-                        <div className="aspect-video rounded-xl bg-muted/50" />
-                        <div className="aspect-video rounded-xl bg-muted/50" />
-                    </div>
-                    <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" />
+                <div className="grid h-full gap-4 p-4 md:grid-cols-3 md:grid-rows-3">
+                    <Card className="col-span-2 row-span-2 rounded-xl">
+                        <div className="p-6 pb-2">Net Worth</div>
+                        <div className="px-6 font-bold text-2xl">$1,275.88</div>
+                        <div className="px-6 text-muted-foreground text-sm">
+                            +$75.88 (6.32%) since last month
+                        </div>
+                    </Card>
+                    <Card className="row-span-3 rounded-xl">
+                        <div className="p-6 pb-2">Player Holdings</div>
+                    </Card>
+                    <Card className="min-h-[100vh] rounded-xl md:min-h-min">
+                        <div className="p-6 pb-2">Cash Available</div>
+                    </Card>
+                    <Card className="min-h-[100vh] rounded-xl md:min-h-min">
+                        <div className="p-6 pb-2">Recent Activity</div>
+                    </Card>
                 </div>
             </SidebarInset>
         </SidebarProvider>

@@ -16,6 +16,7 @@ import {
     SidebarMenuSubButton,
     SidebarMenuSubItem,
 } from "@/components/shadcn/sidebar"
+import { cn } from "@/lib/utils"
 
 export function NavMain({
     items,
@@ -53,7 +54,14 @@ export function NavMain({
                                 <SidebarMenuSub>
                                     {item.items?.map((subItem) => (
                                         <SidebarMenuSubItem key={subItem.title}>
-                                            <SidebarMenuSubButton asChild>
+                                            <SidebarMenuSubButton
+                                                asChild
+                                                className={cn({
+                                                    "font-semibold text-foreground hover:bg-transparent":
+                                                        subItem.url ===
+                                                        "/trading/portfolio",
+                                                })}
+                                            >
                                                 <a href={subItem.url}>
                                                     <span>{subItem.title}</span>
                                                 </a>

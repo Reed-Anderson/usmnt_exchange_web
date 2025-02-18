@@ -31,7 +31,7 @@ const chartConfig = {
 
 export const NetWorthCard = () => {
     return (
-        <Card className="col-span-3 row-span-2 flex flex-col overflow-hidden rounded-xl">
+        <Card className="col-span-2 row-span-2 flex flex-col overflow-hidden rounded-xl">
             <CardHeader>
                 <div className="text-muted-foreground">Net Worth</div>
                 <div>

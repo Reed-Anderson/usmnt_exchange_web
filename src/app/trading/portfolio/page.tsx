@@ -12,7 +12,7 @@ export default function PortfolioPage() {
             <AppSidebar />
             <SidebarInset className="h-dvh">
                 <AppHeader />
-                <div className="grid min-h-0 gap-4 p-4 md:grid-cols-6 md:grid-rows-3">
+                <div className="flex flex-col md:grid min-h-0 gap-4 p-4 md:grid-cols-[1fr_2fr_3fr] md:grid-rows-3">
                     <NetWorthCard />
                     <PlayerHoldingsCard />
                     <CashAvailableCard />

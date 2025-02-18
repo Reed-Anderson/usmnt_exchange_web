@@ -16,7 +16,16 @@ import {
 } from "@/components/shadcn/table"
 import { cn, formatCurrency } from "@/lib/utils"
 
-const tableData = [
+type PlayerHoldingRow = {
+    player: string
+    playerId: number
+    position: string
+    quantity: number
+    averagePurchasePrice: number
+    latestPrice: number
+}
+
+const tableData: PlayerHoldingRow[] = [
     {
         player: "Folarin Balogun",
         playerId: 1,
@@ -181,7 +190,7 @@ const tableData = [
 
 export const PlayerHoldingsCard = () => {
     return (
-        <Card className="col-span-3 row-span-3 flex flex-col rounded-xl">
+        <Card className="row-span-3 flex flex-col rounded-xl">
             <CardHeader>
                 <CardTitle>Player Holdings</CardTitle>
                 <CardDescription>
@@ -191,7 +200,7 @@ export const PlayerHoldingsCard = () => {
             <CardContent className="h-full min-h-0 flex-1">
                 <div className="h-full w-full rounded-md border">
                     <ScrollArea className="h-full w-full rounded-md">
-                        <Table className="h-full">
+                        <Table className="h-full text-xs 2xl:text-sm">
                             <TableHeader className="sticky top-0">
                                 <TableRow className="text-muted-foreground">
                                     <TableCell>Total Value</TableCell>
@@ -255,7 +264,7 @@ const PlayerRow = (props: PlayerRowProps) => {
             <TableCell className={coloredText}>
                 {formatCurrency(
                     (props.latestPrice - props.averagePurchasePrice) *
-                        props.quantity,
+                    props.quantity,
                 )}
             </TableCell>
         </TableRow>

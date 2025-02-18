@@ -22,8 +22,8 @@ export const RecentActivityCard = () => {
         valArr.push(Math.random())
     }
     return (
-        <Card className="col-span-2 flex flex-col rounded-xl">
-            <CardHeader className="flex-row items-center space-y-0">
+        <Card className="flex flex-col rounded-xl">
+            <CardHeader className="flex-row space-y-0">
                 <div className="flex grow flex-col gap-1">
                     <CardTitle>Recent Activity</CardTitle>
                     <CardDescription>
@@ -36,7 +36,7 @@ export const RecentActivityCard = () => {
             </CardHeader>
             <CardContent className="min-h-0 shrink grow">
                 <ScrollArea className="h-full rounded-xl border">
-                    <Table>
+                    <Table className="text-xs 2xl:text-sm">
                         <TableBody>
                             {valArr.map((val) => (
                                 <TableRow key={val}>
@@ -47,7 +47,7 @@ export const RecentActivityCard = () => {
                                     <TableCell>$150</TableCell>
                                     <TableCell>8.32 Units</TableCell>
                                     <TableCell>
-                                        <Badge className="bg-gray-600">
+                                        <Badge variant="secondary">
                                             Pending
                                         </Badge>
                                     </TableCell>

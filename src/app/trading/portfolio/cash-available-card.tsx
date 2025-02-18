@@ -15,7 +15,7 @@ export const CashAvailableCard = () => {
                     Funds available for investments
                 </CardDescription>
             </CardHeader>
-            <CardContent className="flex flex-col justify-center gap-2 2xl:gap-4 px-6 2xl:px-10">
+            <CardContent className="flex flex-col justify-center gap-2 px-6 2xl:gap-4 2xl:px-10">
                 <div className="flex flex-col">
                     <div className="font-bold text-xl 2xl:text-4xl">$1,200</div>
                     <div className="text-muted-foreground text-xs 2xl:text-sm">

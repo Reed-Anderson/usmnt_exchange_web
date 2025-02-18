@@ -10,6 +10,7 @@ import {
 import { Button } from "./shadcn/button"
 import { SidebarTrigger } from "./shadcn/sidebar"
 import { Input } from "./shadcn/input"
+import { ThemeToggle } from "./theme-toggle"
 
 export const AppHeader = () => {
     return (
@@ -34,7 +35,8 @@ export const AppHeader = () => {
                     icon={Search}
                     placeholder="Search..."
                 />
-                <Button className="px-2" variant="ghost">
+                <ThemeToggle />
+                <Button className="px-2" size="icon" variant="ghost">
                     <Bell className="size-4" />
                 </Button>
             </div>

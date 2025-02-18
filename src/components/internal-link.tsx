@@ -10,7 +10,7 @@ export const InternalLink = (props: InternalLinkProps) => {
     return (
         <Link
             href={props.href}
-            className={`-ml-1 rounded-md p-1 underline decoration-gray-300 hover:bg-gray-200 hover:decoration-gray-400 ${props.className}`}
+            className={`-ml-1 rounded-md p-1 underline decoration-gray-300 hover:bg-gray-200 hover:decoration-gray-400 dark:hover:bg-gray-700 dark:decoration-gray-600 dark:hover:decoration-gray-400 ${props.className}`}
         >
             {props.children}
         </Link>
